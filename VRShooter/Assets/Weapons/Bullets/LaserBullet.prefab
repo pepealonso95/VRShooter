@@ -21,9 +21,9 @@ GameObject:
   - component: {fileID: 4479626059291518}
   - component: {fileID: 33375119639388970}
   - component: {fileID: 23881601613291330}
-  - component: {fileID: 135696738614477494}
   - component: {fileID: 54837765854452320}
-  - component: {fileID: 136066688900901510}
+  - component: {fileID: 114761853562540832}
+  - component: {fileID: 135232687456966566}
   m_Layer: 0
   m_Name: LaserBullet
   m_TagString: Untagged
@@ -37,13 +37,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1274834893770678}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.22411433, y: 3.0021434, z: 0.83030486}
-  m_LocalScale: {x: 0.006538636, y: 0.006538636, z: 0.024605192}
+  m_LocalRotation: {x: -0.0068848957, y: -0, z: -0, w: 0.99997634}
+  m_LocalPosition: {x: 0.46397233, y: -0.38897586, z: 16.672024}
+  m_LocalScale: {x: 0.01848961, y: 0.018522348, z: 0.021280084}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.78900003, y: 0, z: 0}
 --- !u!23 &23881601613291330
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -101,7 +101,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &135696738614477494
+--- !u!114 &114761853562540832
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1274834893770678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a91f62a3bb699e3499fef5e8fbc28644, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 500
+  multiplier: 1
+--- !u!135 &135232687456966566
 SphereCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -111,18 +124,5 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.50000006
   m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136066688900901510
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1274834893770678}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.502349
-  m_Height: 3.7807252
-  m_Direction: 1
-  m_Center: {x: 0.13158146, y: 0, z: 0.011855429}

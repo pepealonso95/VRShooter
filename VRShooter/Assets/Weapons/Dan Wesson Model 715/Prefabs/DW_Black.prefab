@@ -1515,6 +1515,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe99470f28a41a64fb799f9b071ad68f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tracerEffect: {fileID: 11400000, guid: b2007fe5631c7614586d24a05e074a32, type: 2}
-  muzzleTransform: {fileID: 4810973455053318}
+  laser: {fileID: 1274834893770678, guid: b55905a4c5b45404ea8e40fb880947ba, type: 2}
+  barrelEnd: {fileID: 4810973455053318}
   pulse: 500
+  damageMultiplier: 1
+  fireSpeed: 5000
+  rounds: 10

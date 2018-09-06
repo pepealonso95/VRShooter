@@ -1,37 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using EZEffects;
 
 public class LaserGun : MonoBehaviour,FireArm {
 
-    public EffectTracer tracerEffect;
-    public Transform muzzleTransform;
+    public GameObject laser;
+    public Transform barrelEnd;
     public int pulse = 500;
+    public int damageMultiplier = 1;
+    public float fireSpeed = 5000f;
+    public int rounds = 10;
 
     public void Fire()
     {
-        RaycastHit hit = new RaycastHit();
-        Ray ray = new Ray(muzzleTransform.position, muzzleTransform.forward);
-
-        tracerEffect.ShowTracerEffect(muzzleTransform.position, muzzleTransform.forward, 250f);
+        if (rounds > 0)
+        {
+            GameObject laserInstance = Instantiate(laser, barrelEnd.position, barrelEnd.rotation);
+            laserInstance.GetComponent<LaserBullet>().multiplier = damageMultiplier;
+            laserInstance.GetComponent<Rigidbody>().AddForce(barrelEnd.forward * fireSpeed);
+            rounds--;
+            print("fire");
+        }
     }
 
     public void Reload(int ammo)
     {
         throw new System.NotImplementedException();
     }
-    
-
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
     public ushort PulseDuration()
     {
