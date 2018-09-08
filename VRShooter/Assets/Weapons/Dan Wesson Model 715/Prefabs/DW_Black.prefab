@@ -173,6 +173,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4111136892852958}
   - component: {fileID: 114549212746496046}
+  - component: {fileID: 65184045132077364}
+  - component: {fileID: 65021708485502258}
   m_Layer: 0
   m_Name: DW_Black
   m_TagString: Untagged
@@ -387,15 +389,15 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1419150414014942}
-  m_LocalRotation: {x: 0.33816752, y: -0.10910304, z: -0.046957955, w: 0.93355995}
-  m_LocalPosition: {x: -0.012620727, y: -0.075543046, z: -0.11376903}
+  m_LocalRotation: {x: 0.35785997, y: -0.122477636, z: -0.0073445737, w: 0.92567897}
+  m_LocalPosition: {x: -0.0029555485, y: -0.053592198, z: -0.13084853}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4221412109280314}
   - {fileID: 4810973455053318}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 38.4, y: -17.485, z: -11.89}
+  m_LocalEulerAnglesHint: {x: 41.355003, y: -18.004002, z: -7.7530003}
 --- !u!4 &4173034675235554
 Transform:
   m_ObjectHideFlags: 1
@@ -643,7 +645,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1741909202035174}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0039, y: 0.1409, z: 0.2265}
+  m_LocalPosition: {x: 0.0021, y: 0.141, z: 0.225}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4111136892852958}
@@ -1486,6 +1488,30 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1226802480726362}
   m_Mesh: {fileID: 4300026, guid: ad8bd963959aeaf43a59d15f8da6ec7c, type: 3}
+--- !u!65 &65021708485502258
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1419150414014942}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.080785595, y: 0.21228662, z: 0.34298116}
+  m_Center: {x: -0.018441776, y: 0.08806665, z: 0.04871393}
+--- !u!65 &65184045132077364
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1419150414014942}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.080785595, y: 0.21228662, z: 0.34298116}
+  m_Center: {x: -0.018441776, y: 0.08806665, z: 0.04871393}
 --- !u!95 &95177685355192510
 Animator:
   serializedVersion: 3
@@ -1519,5 +1545,5 @@ MonoBehaviour:
   barrelEnd: {fileID: 4810973455053318}
   pulse: 500
   damageMultiplier: 1
-  fireSpeed: 5000
-  rounds: 10
+  fireSpeed: 500
+  rounds: 3
