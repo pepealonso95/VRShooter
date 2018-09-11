@@ -2,12 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RightHand : MonoBehaviour {
+public class RightHand : PlayerController {
 
-
-    public GameObject heldWeapon;
-    public SteamVR_TrackedObject trackedObject;
-
+    
     public static RightHand instance;
 
     void Awake()
@@ -16,6 +13,7 @@ public class RightHand : MonoBehaviour {
         {
             instance = this;
         }
+        joint = GetComponent<FixedJoint>();
     }
 
     private void OnDestroy()
@@ -25,23 +23,5 @@ public class RightHand : MonoBehaviour {
             instance = null;
         }
     }
-
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        var device = SteamVR_Controller.Input((int)trackedObject.index);
-        FireArm arm = heldWeapon.GetComponent<FireArm>();
-        if (heldWeapon != null && device.GetPressDown(SteamVR_Controller.ButtonMask.Trigger))
-        {
-            arm.Fire();
-            device.TriggerHapticPulse(arm.PulseDuration());
-        }
-
-    }
+    
 }

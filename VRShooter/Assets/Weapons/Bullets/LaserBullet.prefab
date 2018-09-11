@@ -102,7 +102,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!96 &96790846614894876
 TrailRenderer:
   serializedVersion: 2
@@ -254,8 +254,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 500
   multiplier: 1
-  lifeSpan: 10
-  bulletMark: {fileID: 0}
+  lifeSpan: 3
+  bulletMark: {fileID: 1541343493636374, guid: 70b23b30da6ec884598854f24ddfabc9, type: 2}
 --- !u!135 &135232687456966566
 SphereCollider:
   m_ObjectHideFlags: 1

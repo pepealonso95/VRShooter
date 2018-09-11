@@ -6,7 +6,7 @@ public class LaserGun : MonoBehaviour,FireArm {
 
     public GameObject laser;
     public Transform barrelEnd;
-    public int pulse = 500;
+    public int pulse = 1500;
     public int damageMultiplier = 1;
     public float fireSpeed = 5000f;
     public int rounds = 10;
@@ -19,7 +19,6 @@ public class LaserGun : MonoBehaviour,FireArm {
             laserInstance.GetComponent<LaserBullet>().multiplier = damageMultiplier;
             laserInstance.GetComponent<Rigidbody>().AddForce(barrelEnd.forward * fireSpeed);
             rounds--;
-            print("fire");
         }
     }
 
