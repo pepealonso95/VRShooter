@@ -7,4 +7,5 @@ public interface FireArm {
     void Fire();
     void Reload(int ammo);
     ushort PulseDuration();
+    void GrabAdjust(Transform controler);
 }

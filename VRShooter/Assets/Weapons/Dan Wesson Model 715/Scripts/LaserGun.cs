@@ -31,4 +31,9 @@ public class LaserGun : MonoBehaviour,FireArm {
     {
         return (ushort)pulse;
     }
+
+    public void GrabAdjust(Transform controller)
+    {
+        transform.forward = controller.forward;
+    }
 }

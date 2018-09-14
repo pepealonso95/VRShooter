@@ -72,4 +72,9 @@ public class FlashLight : MonoBehaviour, FireArm {
     {
         return (ushort)pulse;
     }
+
+    public void GrabAdjust(Transform controller)
+    {
+        Quaternion.FromToRotation(Vector3.forward, controller.forward);
+    }
 }
