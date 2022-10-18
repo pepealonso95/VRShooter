@@ -13,7 +13,6 @@ public class RightHand : PlayerController {
         {
             instance = this;
         }
-        //joint = GetComponent<FixedJoint>();
     }
 
     private void OnDestroy()
